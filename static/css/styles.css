@@ -1,0 +1,326 @@
+body {
+    background-color: #1C2526;
+    color: #E5E7EB;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    overflow: hidden;
+}
+.chat-container {
+    display: flex;
+    height: 100vh;
+    border: 1px solid #444;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+.menu-btn-container {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 10;
+}
+.menu-btn {
+    width: 40px;
+    height: 40px;
+    background-color: #2A2F30;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+.menu-btn:hover {
+    background-color: #3A3F40;
+}
+.menu-btn i {
+    font-size: 1.2rem;
+    color: #A0AEC0;
+    transition: color 0.2s ease-in-out;
+}
+.menu-btn:hover i {
+    color: #E5E7EB;
+}
+.sidebar {
+    width: 25%;
+    background-color: #121212;
+    padding: 1rem;
+    overflow-y: auto;
+    transition: width 0.3s ease-in-out;
+    position: relative;
+}
+.sidebar.hidden {
+    width: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+.sidebar-header i {
+    font-size: 1.2rem;
+    color: #A0AEC0;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+.sidebar-header i:hover {
+    color: #E5E7EB;
+}
+.new-chat-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem;
+    background-color: #065F46;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+.new-chat-btn:hover {
+    background-color: #064E3B;
+}
+.new-chat-btn i {
+    margin-right: 0.5rem;
+}
+.search-input {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #2A2F30;
+    border: none;
+    border-radius: 6px;
+    color: #E5E7EB;
+    outline: none;
+    margin-bottom: 1rem;
+    display: none;
+}
+.chat-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+.chat-item:hover {
+    background-color: #2A2F30;
+}
+.chat-item.active {
+    background-color: #2A2F30;
+}
+.chat-item .icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #4B5563;
+    margin-right: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+.chat-item.active .icon {
+    background-color: #10B981;
+}
+.chat-item .delete-btn {
+    opacity: 0;
+    color: #EF4444;
+    transition: opacity 0.2s ease-in-out;
+}
+.chat-item:hover .delete-btn {
+    opacity: 1;
+}
+.chat-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #1C2526;
+    transition: all 0.3s ease-in-out;
+}
+.chat-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+    border-bottom: 1px solid #444;
+}
+.chat-header i {
+    font-size: 1.2rem;
+    color: #A0AEC0;
+    margin-left: 1rem;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+.chat-header i:hover {
+    color: #E5E7EB;
+}
+.chat-messages {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 60%;
+    margin-top: 10%;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+.welcome-container.hidden {
+    opacity: 0;
+    display: none;
+}
+.welcome-container img {
+    width: 104px;
+    margin-bottom: 1.5rem;
+}
+.welcome-container p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #A0AEC0;
+}
+.agent-selection {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.agent-btn {
+    padding: 0.5rem 1rem;
+    background-color: #2A2F30;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+.agent-btn:hover {
+    background-color: #3A3F40;
+}
+.agent-btn.active {
+    background-color: #065F46;
+}
+.agent-btn.active:hover {
+    background-color: #064E3B;
+}
+.messages-container {
+    width: 100%;
+    max-width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+.message {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+.message.user {
+    margin-left: auto;
+    flex-direction: row-reverse;
+}
+.message.bot {
+    margin-right: auto;
+}
+.message .avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #4B5563;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1rem;
+    font-size: 1rem;
+}
+.message.user .avatar {
+    background-color: #065F46;
+}
+.message .content {
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #2A2F30;
+    line-height: 1.6;
+    width: 100%;
+}
+.message.user .content {
+    background-color: #065F46;
+}
+pre, code {
+    background-color: #0D0D0D;
+    border-radius: 6px;
+    padding: 0.5rem;
+    font-family: 'JetBrains Mono', monospace;
+}
+.chat-input {
+    padding: 1rem;
+    background-color: #1C2526;
+    border-top: 1px solid #444;
+}
+.chat-input.initial {
+    margin-top: auto;
+    margin-bottom: 10%;
+    border: none;
+}
+.input-container {
+    display: flex;
+    align-items: center;
+    background-color: #2A2F30;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    max-width: 60%;
+    margin: 0 auto;
+}
+.input-container input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #E5E7EB;
+    outline: none;
+    font-size: 1rem;
+}
+.input-container i {
+    font-size: 1.2rem;
+    color: #A0AEC0;
+    margin-left: 0.75rem;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+.input-container i:hover {
+    color: #E5E7EB;
+}
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #1C2526;
+}
+::-webkit-scrollbar-thumb {
+    background: #4B5563;
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #6B7280;
+}
+.spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #E5E7EB;
+    animation: spin 1s ease-in-out infinite;
+    margin: 1rem;
+}
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
