@@ -1,13 +1,9 @@
----
-
 # Chatbot Project
 
 Un'applicazione web per interagire con due agenti:
 
 * **Google Agent**: per interfacciarsi con i servizi della suite Google.
 * **RAG Agent**: per il retrieval-augmented generation.
-
----
 
 ## 📁 Struttura del Progetto
 
