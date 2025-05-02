@@ -1,55 +1,87 @@
+---
+
 # Chatbot Project
 
-Un'applicazione web per interagire con due agenti: Google Agent (per la suite Google) e RAG Agent (per il retrieval-augmented generation).
+Un'applicazione web per interagire con due agenti:
 
-## Struttura del progetto
+* **Google Agent**: per interfacciarsi con i servizi della suite Google.
+* **RAG Agent**: per il retrieval-augmented generation.
 
+---
+
+## 📁 Struttura del Progetto
+
+```
 /project
 │
-├─ /static
-│  ├─ /css
-│  │  └─ styles.css      # Stili CSS
-│  ├─ /js
-│  │  └─ scripts.js      # Logica JavaScript
-│  └─ continuity.png     # Logo del chatbot
+├── /static
+│   ├── /css
+│   │   └── styles.css          # Stili CSS
+│   ├── /js
+│   │   └── scripts.js          # Logica JavaScript
+│   └── continuity.png          # Logo del chatbot
 │
-├─ /templates
-│  └─ index.html         # Struttura HTML
+├── /templates
+│   └── index.html              # Template HTML
 │
-├─ /api
-│  ├─ google_agent.py    # Logica per il Google Agent
-│  └─ rag_agent.py       # Logica per il RAG Agent
+├── /api
+│   ├── google_agent.py         # Logica per il Google Agent
+│   └── rag_agent.py            # Logica per il RAG Agent
 │
-├─ app.py                # Server FastAPI
-└─ README.md             # Documentazione
+├── app.py                      # Server FastAPI
+└── README.md                   # Documentazione
+```
 
-## Prerequisiti
+---
 
-- Python 3.8+
-- FastAPI (`pip install fastapi`)
-- Uvicorn (`pip install uvicorn`)
-- Requests (`pip install requests`)
-- Jinja2 (`pip install jinja2`)
+## ✅ Prerequisiti
 
-## Installazione
+* Python **3.8+**
+* FastAPI
+* Uvicorn
+* Requests
+* Jinja2
+
+Installa i pacchetti richiesti con:
+
+```bash
+pip install fastapi uvicorn requests jinja2
+```
+
+---
+
+## 🔧 Installazione
 
 1. Clona il repository:
 
-   git clone <repository-url>
-   cd project
+```bash
+git clone <url-del-repo>
+cd project
+```
 
-Installa le dipendenze:
+2. Verifica che il file `continuity.png` sia presente nella cartella `static`.
 
-pip install fastapi uvicorn requests jinja2
+---
 
-Assicurati che il file continuity.png sia nella directory static.
+## 🚀 Esecuzione
 
-Esecuzione
-Avvia il server:
+Avvia il server con il comando:
 
+```bash
 uvicorn app:app --host 0.0.0.0 --port 8000
+```
 
-Apri il browser e vai a:
+Poi apri il browser e visita:
 
+```
 http://localhost:8000
+```
 
+---
+
+## 📌 Note
+
+* Assicurati di avere le API key o configurazioni necessarie se gli agenti richiedono accesso a servizi esterni (es. Google API).
+* Puoi modificare lo stile e la logica frontend nei file `styles.css` e `scripts.js`.
+
+---
