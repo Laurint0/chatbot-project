@@ -2,8 +2,8 @@
 import requests
 
 # Configurazione per il Google Agent
-BASE_API_URL = "http://10.3.0.11:7860"
-FLOW_ID = "2662ae40-68ec-4429-81ba-38d959790315"
+BASE_API_URL = "http://192.168.1.12:7860"
+FLOW_ID = "da020bcb-ae61-4251-85d2-0cad619c3130"
 TWEAKS = {
     "ComposioAPI-UzJNG": {},
     "Agent-iMCao": {},

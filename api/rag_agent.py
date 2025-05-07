@@ -10,8 +10,8 @@ except ImportError:
     upload_file = None
 
 # Configurazione per il RAG Agent
-BASE_API_URL = "http://10.3.0.11:7860"
-FLOW_ID = "77cb1183-6f07-4f1b-b54d-471de3352240"
+BASE_API_URL = "http://192.168.1.12:7860"
+FLOW_ID = "ab2639d9-54e8-403c-9ef1-cee72d637d63"
 TWEAKS = {
     "ChatOutput-QytQQ": {},
     "Prompt-StSfY": {},

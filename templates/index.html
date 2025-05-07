@@ -28,7 +28,10 @@
             <div class="sidebar-header">
                 <i class="fas fa-search" id="search-btn"></i>
             </div>
-            <div class="new-chat-btn" onclick="startNewChat()">
+            <div class="sidebar-logo">
+                <img src="/static/logo.png" alt="Logo">
+            </div>
+            <div class="new-chat-btn" data-action="start-new-chat">
                 <i class="fas fa-plus"></i> Nuova Chat
             </div>
             <input type="text" class="search-input" id="search-input" placeholder="Cerca chat...">
@@ -42,11 +45,13 @@
             </div>
             <div class="chat-messages" id="messages">
                 <div class="welcome-container" id="welcome-container">
-                    <img src="/static/continuity.png" alt="Logo">
-                    <p>Di cosa hai bisogno?</p>
-                    <div class="agent-selection" id="agent-selection">
-                        <div class="agent-btn" onclick="selectAgent('google')">Google Agent</div>
-                        <div class="agent-btn" onclick="selectAgent('rag')">RAG Agent</div>
+                    <img src="/static/logo.png" alt="Logo" id="welcome-logo">
+                    <div class="welcome-content" id="welcome-content">
+                        <p>Di cosa hai bisogno?</p>
+                        <div class="agent-selection" id="agent-selection">
+                            <div class="agent-btn" data-agent="google">Google Agent</div>
+                            <div class="agent-btn" data-agent="rag">RAG Agent</div>
+                        </div>
                     </div>
                 </div>
                 <div class="messages-container" id="messages-container"></div>
