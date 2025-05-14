@@ -1,9 +1,9 @@
 # project/api/google_agent.py
 import requests
 
-# Configurazione per il Google Agent
-BASE_API_URL = "http://192.168.1.12:7860"
-FLOW_ID = "da020bcb-ae61-4251-85d2-0cad619c3130"
+# Configurazione per il Google Agent, queste informazioni le trovi su langflow (API). In futuro caricherò i flussi
+BASE_API_URL = "$indirizzo:7860"
+FLOW_ID = "$KEY"
 TWEAKS = {
     "ComposioAPI-UzJNG": {},
     "Agent-iMCao": {},
