@@ -9,9 +9,9 @@ except ImportError:
     warnings.warn("Langflow provides a function to help you upload files to the flow. Please install langflow to use it.")
     upload_file = None
 
-# Configurazione per il RAG Agent
-BASE_API_URL = "http://192.168.1.12:7860"
-FLOW_ID = "ab2639d9-54e8-403c-9ef1-cee72d637d63"
+# Configurazione per il RAG Agent, queste informazioni le trovi su langflow (API). In futuro caricherò i flussi
+BASE_API_URL = "$indirizzo:7860"
+FLOW_ID = "$KEY"
 TWEAKS = {
     "ChatOutput-QytQQ": {},
     "Prompt-StSfY": {},
